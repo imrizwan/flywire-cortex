@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+*.part
+.DS_Store
+# user cache never belongs in git
+.flywire-coding-cortex/
+# raw downloads
+**/profiles/*/raw/
+**/raw/
+*.feather
+*.npy
+*.csv.gz

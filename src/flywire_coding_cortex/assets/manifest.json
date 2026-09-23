@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "active_key": "active_profile",
+  "profiles": {
+    "seed": {
+      "label": "Curated circuit (shipped seed)",
+      "approx_size": "~1–5 MB",
+      "description": "FlyWire-derived escape/steering subgraph ready for LIF. Offline after install.",
+      "kind": "seed",
+      "files": []
+    },
+    "codex": {
+      "label": "Codex FAFB v783 CSV dumps + ETL",
+      "approx_size": "~60–300 MB",
+      "description": "Download public Codex gzipped CSVs and rebuild circuit.json via ETL.",
+      "kind": "codex_etl",
+      "base_url": "https://storage.googleapis.com/flywire-data/codex/data/fafb/783",
+      "files": [
+        {"name": "classification.csv.gz", "path": "classification.csv.gz"},
+        {"name": "coordinates.csv.gz", "path": "coordinates.csv.gz"},
+        {"name": "connections.csv.gz", "path": "connections.csv.gz"},
+        {"name": "consolidated_cell_types.csv.gz", "path": "consolidated_cell_types.csv.gz"}
+      ]
+    },
+    "full": {
+      "label": "Zenodo connectivity Feathers (~10.6 GB) + ETL",
+      "approx_size": "~10.6 GB",
+      "description": "Heavy synapse/connectivity Feather tables. Explicit YES confirmation required.",
+      "kind": "zenodo_feather",
+      "confirm": true,
+      "record_url": "https://zenodo.org/records/10676866",
+      "files": [
+        {
+          "name": "proofread_connections_783.feather",
+          "url": "https://zenodo.org/records/10676866/files/proofread_connections_783.feather?download=1",
+          "approx_bytes": 893000000
+        },
+        {
+          "name": "proofread_root_ids_783.npy",
+          "url": "https://zenodo.org/records/10676866/files/proofread_root_ids_783.npy?download=1",
+          "approx_bytes": 1100000
+        },
+        {
+          "name": "flywire_synapses_783.feather",
+          "url": "https://zenodo.org/records/10676866/files/flywire_synapses_783.feather?download=1",
+          "approx_bytes": 9500000000,
+          "optional": true,
+          "note": "Largest file (~9.5 GB). Skipped unless --include-synapses."
+        }
+      ],
+      "requires_extras": ["pandas", "pyarrow"]
+    }
+  }
+}

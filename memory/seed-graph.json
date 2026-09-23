@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "role:dnp09", "label": "Forward implement", "kind": "role", "lastSeen": 0},
+    {"id": "role:gf", "label": "Stop / escape", "kind": "role", "lastSeen": 0},
+    {"id": "role:mdn", "label": "Reverse / revert", "kind": "role", "lastSeen": 0},
+    {"id": "role:lc4", "label": "Risk detector", "kind": "role", "lastSeen": 0},
+    {"id": "role:ascending", "label": "Read conventions", "kind": "role", "lastSeen": 0},
+    {"id": "concept:tests", "label": "Automated tests", "kind": "concept", "lastSeen": 0},
+    {"id": "concept:api-boundary", "label": "API boundary", "kind": "concept", "lastSeen": 0},
+    {"id": "concept:migration", "label": "Data migration", "kind": "concept", "lastSeen": 0}
+  ],
+  "edges": [
+    {"pre": "role:ascending", "post": "role:dnp09", "weight": 1.0, "why": "read before write", "evidence": []},
+    {"pre": "role:lc4", "post": "role:gf", "weight": 1.2, "why": "high risk can stop ship", "evidence": []},
+    {"pre": "concept:tests", "post": "role:dnp09", "weight": 1.0, "why": "verify after implement", "evidence": []},
+    {"pre": "concept:migration", "post": "role:lc4", "weight": 1.1, "why": "migrations are risky", "evidence": []}
+  ]
+}

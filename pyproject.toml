@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flywire-coding-cortex"
+version = "0.1.0"
+description = "Graphify-style connector: run FlyWire-derived LIF neurons and map rates to coding-agent drives"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "FlyWire Coding Cortex contributors" }]
+keywords = ["flywire", "connectome", "LIF", "agent", "openclaw", "cursor", "mcp"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+full = ["pandas>=2.0", "pyarrow>=14"]
+dev = ["build", "wheel"]
+
+[project.scripts]
+flywire-cortex = "flywire_coding_cortex.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/flywire-coding-cortex/flywire-coding-cortex"
+Codex = "https://codex.flywire.ai/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"flywire_coding_cortex" = ["assets/*", "assets/**/*"]
