@@ -28,7 +28,7 @@ dev = ["build", "wheel"]
 flywire-cortex = "flywire_coding_cortex.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/flywire-coding-cortex/flywire-coding-cortex"
+Homepage = "https://github.com/imrizwan/flywire-cortex"
 Codex = "https://codex.flywire.ai/"
 
 [tool.setuptools.packages.find]
