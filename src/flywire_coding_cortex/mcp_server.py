@@ -187,7 +187,7 @@ def run_stdio() -> None:
                     {
                         "protocolVersion": "2024-11-05",
                         "capabilities": {"tools": {}},
-                        "serverInfo": {"name": "flywire-coding-cortex", "version": "0.1.0"},
+                        "serverInfo": {"name": "flywire-coding-cortex", "version": "0.1.1"},
                     },
                 )
             elif method == "notifications/initialized":

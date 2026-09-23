@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flywire-coding-cortex"
-version = "0.1.0"
+version = "0.1.1"
 description = "Run FlyWire-derived LIF neurons and map rates to coding-agent drives"
 readme = "README.md"
 license = { text = "MIT" }
