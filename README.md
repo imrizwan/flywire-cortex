@@ -1,6 +1,6 @@
 # FlyWire Coding Cortex
 
-**Graphify-style connector** for AI coding agents: install once, then every
+**Pip-installable connector** for AI coding agents: install once, then every
 Cursor / OpenClaw / Claude session can **run FlyWire-derived neurons** (leaky
 integrate-and-fire on real synapse edges) and map population rates into
 **coding drives** (implement, stop, reverse, steer, groom).
@@ -21,10 +21,9 @@ integrate-and-fire on real synapse edges) and map population rates into
 
 ## Why this exists
 
-Most agent “skills” are markdown instructions. This package is closer to
-[graphify](https://github.com/safishamsi/graphify): a **pip-installable tool**
-plus an ambient skill/MCP connector so agents can call a real runtime every
-session—without cloning a folder into every project.
+Most agent “skills” are markdown instructions. This package is a
+**pip-installable tool** plus an ambient skill/MCP connector so agents can
+call a real runtime every session—without cloning a folder into every project.
 
 ```text
 coding task
@@ -88,7 +87,7 @@ python -m flywire_coding_cortex.cli status
 
 ---
 
-## Install (graphify-style)
+## Install
 
 ### 1. Package
 

@@ -8,8 +8,8 @@ description: >-
 
 # FlyWire Coding Cortex
 
-Graphify-style connector: install once (`pip install flywire-coding-cortex`),
-then use `flywire-cortex` / MCP in every session.
+Install once (`pip install flywire-coding-cortex`), then use
+`flywire-cortex` / MCP in every session.
 
 **This is not a metaphor-only skill.** You must call the CLI (or MCP tools)
 so real connectome edges are stepped. Do not invent biological fidelity.
